@@ -1,0 +1,89 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+
+namespace Calorie_counter
+{
+    public partial class Form1 : Form
+    {
+        // Constant Fields
+        const int BANANA_ONEHUNDREDANDFIFTEEN_CALORIE_VALUE = 115;
+        const int CHERRY_EIGHTY_CALORIE_VALUE = 80;
+        const int ORANGE_NINETY_CALORIE_VALUE = 90;
+        const int PEAR_ONEHUNDREDANDTWENTY_CALORIE_VALUE = 120;
+
+
+        // field variable to hold the total
+        //initialized with 0
+        private int total = 0;
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+
+        private void bananaPictureBox_Click(object sender, EventArgs e)
+        {
+            // Add the value of 115 Calories to the total.
+            total += BANANA_ONEHUNDREDANDFIFTEEN_CALORIE_VALUE;
+
+
+            // Display the total, formatted as calories
+            totalLabel.Text = total.ToString();
+        }
+
+
+        private void cherryPictureBox_Click(object sender, EventArgs e)
+        {
+            // Add the value of 80 Calories to the total.
+            total += CHERRY_EIGHTY_CALORIE_VALUE;
+
+
+            // Display the total, formated as calories
+            totalLabel.Text = total.ToString();
+        }
+
+
+        private void orangePictureBox_Click(object sender, EventArgs e)
+        {
+            // Add the value of 90 Calories to the total.
+            total += ORANGE_NINETY_CALORIE_VALUE;
+           
+            //Display the total, formatted as calories
+            totalLabel.Text = total.ToString();
+        }
+
+
+        private void pearPictureBox_Click(object sender, EventArgs e)
+        {
+            // Add the value of 120 Calories to the total.
+            total += PEAR_ONEHUNDREDANDTWENTY_CALORIE_VALUE;
+
+
+            // Display the total, formated as calories
+            totalLabel.Text = total.ToString();
+        }
+
+
+        private void resetButton_Click(object sender, EventArgs e)
+        {
+            // Clear the totalLabel
+            totalLabel.ResetText();
+            
+        }
+
+
+        private void exitButton_Click(object sender, EventArgs e)
+        {
+            // Close the form/
+            this.Close();
+        }
+    }
+}
